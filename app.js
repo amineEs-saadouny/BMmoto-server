@@ -13,6 +13,11 @@ app.use(express.json());
 app.use(express.static("Imgs"));
 app.use("/Imgs", express.static(path.join(__dirname, "Imgs")));
 
+
+app.get("/", (request, response) => {
+  response.json({ success: true })
+});
+
 // CREATE
 app.post("/insert", (request, response) => {
   const db = dBService.getDbServiceInstance();
