@@ -15,7 +15,7 @@ app.use("/Imgs", express.static(path.join(__dirname, "Imgs")));
 
 
 app.get("/", (request, response) => {
-  response.json({ success: true })
+  response.json("Hi I'm working!!!");
 });
 
 // CREATE
